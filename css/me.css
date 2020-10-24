@@ -22,7 +22,7 @@ body {
 }
 
 article {
-    margin: 5vh auto;
+    margin: 4vh auto;
     display: grid;
     grid-template-areas:
         'imagen titulo'
