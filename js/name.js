@@ -12,8 +12,9 @@ form.addEventListener('submit', (event) => {
 
     fetch('https://node-red-christianecg.mybluemix.net/name_api?name=' + name)
         .then((get_name) => {
-            console.log(get_name);
-            res.innerHTML = '<h2 id="res">' + get_name + '</h2>';
+            get_name = get_name.json();
+            console.log(get_name['name']);
+            res.innerHTML = '<h2 id="res">' + get_name['name'] + '</h2>';
         })
         .catch((reason) => {
             console.log(reason);
