@@ -19,7 +19,7 @@
 
 .form-box h2 {
     font-size: 1.2rem;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
     padding: 0;
     color: #fff;
     text-align: center;
@@ -169,4 +169,5 @@ button {
     border: none;
     color: inherit;
     font: inherit;
+    width: 100%;
 }

@@ -10,12 +10,12 @@
     <body>
         <article>
             <div class="form-box">
-                <h1>¿Cuál es tu nombre?</h1>
+                <h1>¿Qué idioma es?</h1>
                 <br /><br />
-                <form action="#" method="get" id="form">
+                <form action="#" method="get">
                     <div class="user-box">
                         <input type="text" id="name" name="name" />
-                        <label for="name">Nombre</label>
+                        <label for="name">Escribe aquí</label>
                     </div>
                     <a href="#">
                         <span></span>
@@ -25,9 +25,8 @@
                         <button id="submit">Enviar</button>
                     </a>
                 </form>
-                <h2 id="res"></h2>
+                <h2>{{payload.lang}}</h2>
             </div>
         </article>
     </body>
-    <script src="./js/name.js"></script>
 </html>
