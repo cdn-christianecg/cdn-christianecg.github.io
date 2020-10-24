@@ -13,11 +13,11 @@ form.addEventListener('submit', (event) => {
     fetch('https://node-red-christianecg.mybluemix.net/name_api?name=' + name)
         .then((get_name) => {
             get_name = get_name.json();
-            console.log(get_name['name']);
-            res.innerHTML = '<h2 id="res">' + get_name['name'] + '</h2>';
+            console.log(get_name);
+            res.innerHTML = get_name['name'];
         })
         .catch((reason) => {
             console.log(reason);
-            res.innerHTML = '<h2 id="res"> Se ha producido una excepción </h2>';
+            res.innerHTML = 'Se ha producido una excepción';
         });
 });
