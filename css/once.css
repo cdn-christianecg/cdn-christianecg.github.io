@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'ProductSans';
+    src: url('../ProductSans-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: ProductSans, Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+body {
+    background-color: azure;
+    background-image: url(../images/bg.png);
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-areas: title;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    grid-area: title;
+    font-size: 1.5rem;
+}
+
+article {
+    margin: 3vh auto;
+    padding: 2rem;
+}
+
+article h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#info p {
+    margin-bottom: 0.8rem;
+}
+
+a button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: teal;
+    color: white;
+}
+
+a,
+a:link,
+a:visited,
+a:hover {
+    color: turquoise;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 80%;
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    body {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    body {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    body {
+        width: 98%;
+    }
+}

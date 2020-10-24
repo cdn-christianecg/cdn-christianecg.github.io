@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/once.css" />
+        <link rel="stylesheet" href="./css/form.css" />
+        <title>¿Cuál es tu nombre?</title>
+    </head>
+    <body>
+        <article>
+            <div class="form-box">
+                <h1>¿Cuál es tu nombre?</h1>
+                <br /><br />
+                <form action="#" method="get">
+                    <div class="user-box">
+                        <input type="text" id="name" name="name" />
+                        <label for="name">Nombre</label>
+                    </div>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Enviar
+                    </a>
+                </form>
+                <h2>{{msg.payload.name}}</h2>
+            </div>
+        </article>
+    </body>
+</html>
