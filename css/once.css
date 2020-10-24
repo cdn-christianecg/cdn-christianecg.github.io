@@ -50,7 +50,7 @@ article h1 {
     margin-bottom: 0.8rem;
 }
 
-a button {
+a button.project {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     background-color: teal;
