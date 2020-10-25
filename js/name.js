@@ -8,7 +8,6 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     res.innerHTML = 'Cargando...';
     getName();
-    res.innerHTML = 'Se ha producido una excepción';
 });
 
 async function getName() {
