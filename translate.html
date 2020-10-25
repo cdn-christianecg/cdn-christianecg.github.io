@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/once.css" />
+        <link rel="stylesheet" href="./css/form.css" />
+        <link rel="stylesheet" href="./css/translate.css" />
+        <title>¿Cuál es tu nombre?</title>
+    </head>
+    <body>
+        <article>
+            <div class="form-box">
+                <h1>Traductor</h1>
+                <br /><br />
+                <form action="#" method="get" id="form">
+                    <div id="lang-buttons">
+                        <a id="es" class="lang-button">Español a inglés</a>
+                        <a id="en" class="lang-button">Inglés a español</a>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" id="text" name="text" />
+                        <label for="text">Texto a traducir</label>
+                    </div>
+
+                    <a href="#">
+                        <button id="submit">Enviar</button>
+                    </a>
+                </form>
+                <h2 id="res"></h2>
+            </div>
+        </article>
+    </body>
+    <script src="./js/translate.js"></script>
+</html>
