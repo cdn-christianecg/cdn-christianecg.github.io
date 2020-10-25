@@ -43,6 +43,7 @@ async function getTranslate() {
         'https://node-red-christianecg.mybluemix.net/translate_api',
         {
             method: 'POST',
+            mode: 'cors',
             body: JSON.stringify(msg),
         }
     );
