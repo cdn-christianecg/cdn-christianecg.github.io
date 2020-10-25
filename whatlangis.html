@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/once.css" />
         <link rel="stylesheet" href="./css/form.css" />
-        <title>¿Cuál es tu nombre?</title>
+        <title>¿Qué idioma es?</title>
     </head>
     <body>
         <article>
             <div class="form-box">
                 <h1>¿Qué idioma es?</h1>
                 <br /><br />
-                <form action="#" method="get">
+                <form action="#" method="get" id="form">
                     <div class="user-box">
                         <input type="text" id="name" name="name" />
                         <label for="name">Escribe aquí</label>
@@ -25,8 +25,9 @@
                         <button id="submit">Enviar</button>
                     </a>
                 </form>
-                <h2>{{payload.lang}}</h2>
+                <h2 id="res"></h2>
             </div>
         </article>
     </body>
+    <script src="./js/whatlangis.js"></script>
 </html>

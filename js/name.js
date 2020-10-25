@@ -4,7 +4,11 @@ var res = document.getElementById('res');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    getName();
+    try {
+        getName();
+    } catch (error) {
+        res.innerHTML = 'Se ha producido una excepción';
+    }
 });
 
 async function getName() {
