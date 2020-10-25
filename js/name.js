@@ -8,14 +8,10 @@ form.addEventListener('submit', (event) => {
 
     console.log(
         'https://node-red-christianecg.mybluemix.net/name_api?name=' + name
-    );
+	);
+	
+	var response = await fetch('https://node-red-christianecg.mybluemix.net/name_api?name='+name);
+	var data = await response.json();
 
-    fetch('https://node-red-christianecg.mybluemix.net/name_api?name=' + name)
-        .then((get_name) => {
-            res.innerHTML = get_name;
-        })
-        .catch((reason) => {
-            console.log(reason);
-            res.innerHTML = 'Se ha producido una excepción';
-        });
+	res.innerHTML = data;
 });
