@@ -83,6 +83,8 @@ async function getName() {
             name
     );
     var data = await response.text();
-    res.innerHTML = 'Se ha producido una excepción';
+    if (langs[data] == undefined) {
+        res.innerHTML = 'Se ha producido una excepción';
+    }
     res.innerHTML = langs[data];
 }
