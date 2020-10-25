@@ -37,12 +37,13 @@ form.addEventListener('submit', (event) => {
 
 async function getTranslate() {
     var text = document.getElementById('text').value;
+    var msg = '{"lang":"' + lang + '","text":"' + text + '"}';
 
     var response = await fetch(
         'https://node-red-christianecg.mybluemix.net/translate_api',
         {
             method: 'POST',
-            body: 'lang=' + lang + '&text=' + text,
+            body: JSON.stringify(msg),
         }
     );
     var data = await response.text();
