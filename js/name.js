@@ -21,8 +21,8 @@ async function getName() {
         'https://node-red-christianecg.mybluemix.net/name_api?name=' + name
     );
     var data = await response.json();
-    if (data['name'] == undefined) {
-        res.innerHTML = 'Se ha producido una excepción';
-    }
-    res.innerHTML = data['name'];
+    res.innerHTML =
+        data['name'] == undefined
+            ? 'Se ha producido una excepción'
+            : data['name'];
 }
