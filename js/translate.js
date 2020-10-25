@@ -3,7 +3,7 @@ var form = document.getElementById('form');
 var res = document.getElementById('res');
 var es_button = document.getElementById('es');
 var en_button = document.getElementById('en');
-var lang = es;
+var lang = 'es';
 
 es_button.classList.add('lang-button-selected');
 
@@ -14,7 +14,7 @@ es_button.addEventListener('click', (event) => {
     en_button.classList.contains('lang-button-selected')
         ? en_button.classList.remove('lang-button-selected')
         : 0;
-    lang = es;
+    lang = 'es';
 });
 
 en_button.addEventListener('click', (event) => {
@@ -24,7 +24,7 @@ en_button.addEventListener('click', (event) => {
     es_button.classList.contains('lang-button-selected')
         ? es_button.classList.remove('lang-button-selected')
         : 0;
-    lang = en;
+    lang = 'en';
 });
 
 form.setAttribute('autocomplete', 'off');
