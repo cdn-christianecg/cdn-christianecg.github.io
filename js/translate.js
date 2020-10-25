@@ -39,14 +39,11 @@ async function getTranslate() {
     var text = document.getElementById('text').value;
     var msg = '{"lang":"' + lang + '","text":"' + text + '"}';
 
-    var response = await fetch(
-        'https://node-red-christianecg.mybluemix.net/translate_api',
-        {
-            method: 'POST',
-            mode: 'cors',
-            body: JSON.stringify(msg),
-        }
-    );
+    var response = await fetch('/translate_api', {
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify(msg),
+    });
     var data = await response.text();
 
     res.innerHTML = data == undefined ? 'Se ha producido una excepción' : data;
