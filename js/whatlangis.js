@@ -71,11 +71,8 @@ form.setAttribute('autocomplete', 'off');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    try {
-        getName();
-    } catch (error) {
-        res.innerHTML = 'Se ha producido una excepción';
-    }
+    res.innerHTML = 'Cargando...';
+    getName();
 });
 
 async function getName() {
@@ -86,6 +83,6 @@ async function getName() {
             name
     );
     var data = await response.text();
-
+    res.innerHTML = 'Se ha producido una excepción';
     res.innerHTML = langs[data];
 }
