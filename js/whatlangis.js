@@ -67,6 +67,8 @@ const langs = {
     vi: 'Vietnamita',
 };
 
+form.setAttribute('autocomplete', 'off');
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     try {
