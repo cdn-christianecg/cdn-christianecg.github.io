@@ -78,10 +78,7 @@ form.addEventListener('submit', (event) => {
 async function getName() {
     var name = document.getElementById('name').value;
 
-    var response = await fetch(
-        'https://node-red-christianecg.mybluemix.net/whatlangis_api?text=' +
-            name
-    );
+    var response = await fetch('/whatlangis_api?text=' + name);
     var data = await response.text();
     res.innerHTML =
         langs[data] == undefined
