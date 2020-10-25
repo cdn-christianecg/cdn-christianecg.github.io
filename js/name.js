@@ -18,5 +18,5 @@ async function getName() {
     );
     var data = await response.json();
 
-    res.innerHTML = data;
+    res.innerHTML = data['name'];
 }
