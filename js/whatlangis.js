@@ -80,7 +80,7 @@ async function getName() {
     var name = document.getElementById('name').value;
 
     var response = await fetch(
-        'https://node-red-christianecg.mybluemix.net/whatlangis_api?name=' +
+        'https://node-red-christianecg.mybluemix.net/whatlangis_api?text=' +
             name
     );
     var data = await response.text();
