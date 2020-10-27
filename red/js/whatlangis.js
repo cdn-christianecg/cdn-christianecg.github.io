@@ -20,6 +20,8 @@
 
 /**
  * NOTAS DE USO:
+ * 
+ * Este código debería ser ejecutado después de la etiqueta de cierre de body.
  *
  * Para poder hacer uso correctamente de éste código, el fichero HTML deberá contener tres
  * elementos fundamentales: Un formulario con el ID form, un campo de texto input con el ID
@@ -30,10 +32,11 @@
  *
  * Finalmente, es necesario que la API retorne exclusivamente texto plano.
  *
- * Este fichero puede ser llamado directamente en tu fichero HTML desde el cdn, via
+ * Se recomienda que este fichero sea llamado en tu fichero HTML desde el cdn, via
  * http://cdn.christianecg.com/red/js/whatlangis.js ó
  * https://cdn.christianecg.com/red/js/whatlangis.js
- * según sea necesario. O bien, puedes descargarlo e incorporarlo a tu código original.
+ * según sea necesario. O bien, aunque no recomendable, puedes descargarlo e incorporarlo
+ * a tu código original.
  */
 
 // Se obtiene el formulario a través del ID form
@@ -46,6 +49,9 @@ var form = document.getElementById('form');
     de apertura y cierre.
  */
 var res = document.getElementById('res');
+
+// El objeto #txt debería ser un input de tipo texto
+var txt = document.getElementById('txt');
 
 // Diccionario de idiomas
 const langs = {
@@ -129,15 +135,14 @@ async function getLang() {
     var response = await fetch('/whatlangis_api?text=' + txt);
     var data = await response.text();
     res.innerHTML =
-        langs[data] == undefined
+ |       langs[data] == undefined
             ? 'Se ha producido una excepción'
             : langs[data];
 }
 
 // Validación y retorno del contenido del objeto txt
-// El objeto #txt debería ser un input de tipo texto
 function getTxt() {
-    return document.getElementById('txt').value == ''
+    return txt.value == ''
         ? '-'
-        : document.getElementById('txt').value;
+        : txt.value;
 }
