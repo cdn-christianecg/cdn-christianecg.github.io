@@ -21,7 +21,7 @@
 
 /**
  * NOTAS DE USO:
- * 
+ *
  * Este código debería ser ejecutado después de la etiqueta de cierre de body.
  *
  * Para poder hacer uso correctamente de éste código, el fichero HTML deberá contener tres
@@ -127,10 +127,9 @@ form.setAttribute('autocomplete', 'off');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     res.innerHTML = 'Cargando...';
-    if(txt.value!=''){
+    if (txt.value != '') {
         getLang();
-    }
-    else {
+    } else {
         res.innerHTML = 'La solicitud no puede estar en blanco.';
     }
 });
@@ -141,14 +140,12 @@ async function getLang() {
     var response = await fetch('/whatlangis_api?text=' + txt_content);
     var data = await response.text();
     res.innerHTML =
- |       langs[data] == undefined
+        langs[data] == undefined
             ? 'Se ha producido una excepción'
             : langs[data];
 }
 
 // Validación y retorno del contenido del objeto txt
 function getTxt() {
-    return txt.value == ''
-        ? '-'
-        : txt.value;
+    return txt.value == '' ? '-' : txt.value;
 }
