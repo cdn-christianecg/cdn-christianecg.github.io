@@ -35,9 +35,8 @@
  *
  * Se recomienda que este fichero sea llamado en tu fichero HTML desde el cdn, via
  * http://cdn.christianecg.com/red/js/whatlangis.js ó
- * https://cdn.christianecg.com/red/js/whatlangis.js
- * según sea necesario. O bien, aunque no recomendable, puedes descargarlo e incorporarlo
- * a tu código original.
+ * https://cdn.christianecg.com/red/js/whatlangis.js según sea necesario.
+ * O bien, aunque no recomendable, puedes descargarlo e incorporarlo a tu código original.
  */
 
 // Se obtiene el formulario a través del ID form
