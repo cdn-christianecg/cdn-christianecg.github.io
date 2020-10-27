@@ -16,6 +16,7 @@
  * 25/10/2020 - Eliminado modo de recepción json. El modelo solo necesita recibir texto plano
  * 25/10/2020 - Corregido problema de CORS, dirección de API cambiada a ruta local
  * 27/10/2020 - Añadidos comentarios para permitir la distribución del fichero
+ * 27/10/2020 - Corregida verificación del campo a enviar
  */
 
 /**
@@ -126,13 +127,18 @@ form.setAttribute('autocomplete', 'off');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     res.innerHTML = 'Cargando...';
-    getLang();
+    if(txt.value!=''){
+        getLang();
+    }
+    else {
+        res.innerHTML = 'La solicitud no puede estar en blanco.';
+    }
 });
 
 // Función asíncrona que realiza la consulta a la API via GET
 async function getLang() {
-    var txt = getTxt();
-    var response = await fetch('/whatlangis_api?text=' + txt);
+    var txt_content = getTxt();
+    var response = await fetch('/whatlangis_api?text=' + txt_content);
     var data = await response.text();
     res.innerHTML =
  |       langs[data] == undefined
