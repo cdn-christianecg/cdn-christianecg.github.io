@@ -55,6 +55,7 @@ a button.project {
     font-size: 1rem;
     background-color: teal;
     color: white;
+    cursor: pointer;
 }
 
 a,
