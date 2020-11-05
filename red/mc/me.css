@@ -1,0 +1,70 @@
+*{
+    margin: 8;
+    padding: 0;   
+   }
+   
+   html{
+       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+       text-align: justify;
+       color: white;
+       font: 150% sans-serif;
+   }
+   
+   body{
+       background-color: azure;
+       background-image: url(../images/patten4.png);
+       width: 70%;
+       max-width: 800px;
+       margin: 0 auto;
+   }
+   
+   article{
+       margin: 5vh auto;
+       display: grid;
+       grid-template-areas: 
+         'imagen titulo'
+         'imagen texto'
+       ;
+   }
+   
+   article h1{
+       grid-area: titulo;
+       margin-bottom: 1.5rem;
+   }
+   
+   img{
+       width: 10rem;
+       border-radius: 10%;
+       grid-area: imagen;
+       margin: auto 3rem;
+   }
+   
+   #info{
+       grid-area: texto;
+   }
+   
+   #info p{
+       margin-bottom: 0.7rem;
+   }
+   
+   a button{
+       padding: 0.5rem;
+       font-size: 1rem;
+       background-color: teal;   
+       color: white; 
+   }
+   
+   footer {
+       position:absolute;
+       height:50px;
+       line-height:50px;
+       background:black;
+       color:white;
+       text-align:center;
+       left:0;
+       width:100%;
+     }
+     
+     footer.bottom {
+       bottom:0;
+       }
